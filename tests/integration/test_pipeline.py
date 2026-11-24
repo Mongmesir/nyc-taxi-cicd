@@ -6,7 +6,9 @@ import csv
 import json
 from pathlib import Path
 
-from src.pipeline import run_fixture_pipeline
+import pytest
+
+from src.pipeline import run_fixture_pipeline, run_live_pipeline
 
 
 def test_run_fixture_pipeline_produces_expected_outputs(tmp_path: Path) -> None:
@@ -36,3 +38,8 @@ def test_run_fixture_pipeline_produces_expected_outputs(tmp_path: Path) -> None:
 
     saved_meta = json.loads((tmp_path / "run_metadata.json").read_text(encoding="utf-8"))
     assert saved_meta["valid_trip_count"] == 6
+
+
+def test_run_live_pipeline_rejects_unsupported_dataset_id(tmp_path: Path) -> None:
+    with pytest.raises(ValueError, match="Unsupported dataset_id"):
+        run_live_pipeline(output_dir=tmp_path, dataset_id="invalid-id")

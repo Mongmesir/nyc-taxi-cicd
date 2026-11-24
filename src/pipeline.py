@@ -14,9 +14,11 @@ from src.config import (
     DEFAULT_DATASET_ID,
     DEFAULT_ZONES_LIMIT,
     SAMPLE_DATA_DIR,
+    SUPPORTED_DATASET_IDS,
     TRIPS_ENRICHED_COLUMNS,
     ZONE_SUMMARY_COLUMNS,
     ZONES_LOOKUP_COLUMNS,
+    is_supported_dataset,
 )
 from src.ingest import fetch_trips_csv, fetch_zones_json
 from src.transform import (
@@ -164,6 +166,10 @@ def run_live_pipeline(
     summary_markdown: Path | None = None,
 ) -> dict[str, Any]:
     """Run the live pipeline against NYC Open Data Trips CSV and Zones JSON APIs."""
+    if not is_supported_dataset(dataset_id):
+        raise ValueError(
+            f"Unsupported dataset_id '{dataset_id}'. Supported: {SUPPORTED_DATASET_IDS}"
+        )
     trips_csv = fetch_trips_csv(dataset_id=dataset_id, limit=limit, offset=offset)
     zones_json = fetch_zones_json(limit=DEFAULT_ZONES_LIMIT)
     return _execute_pipeline(
