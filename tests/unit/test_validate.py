@@ -4,7 +4,12 @@ from __future__ import annotations
 
 import pytest
 
-from src.config import TRIPS_ENRICHED_COLUMNS
+from src.config import (
+    ALT_DATASET_2024_ID,
+    DEFAULT_DATASET_ID,
+    TRIPS_ENRICHED_COLUMNS,
+    is_supported_dataset,
+)
 from src.validate import validate_enriched_dataset, validate_trip_row
 
 
@@ -62,3 +67,9 @@ def test_validate_enriched_dataset_enforces_schema_and_non_empty() -> None:
     incomplete_row.pop("fare_per_mile")
     with pytest.raises(ValueError, match="missing required columns"):
         validate_enriched_dataset([incomplete_row], min_rows=1)
+
+
+def test_supported_dataset_ids_include_default_and_2024() -> None:
+    assert is_supported_dataset(DEFAULT_DATASET_ID) is True
+    assert is_supported_dataset(ALT_DATASET_2024_ID) is True
+    assert is_supported_dataset("unknown-id") is False
