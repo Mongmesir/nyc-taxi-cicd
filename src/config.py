@@ -8,8 +8,15 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 SAMPLE_DATA_DIR = PROJECT_ROOT / "data" / "sample"
 
 DEFAULT_DATASET_ID = "4b4i-vvec"
+ALT_DATASET_2024_ID = "rwwi-khbc"
+SUPPORTED_DATASET_IDS = (DEFAULT_DATASET_ID, ALT_DATASET_2024_ID)
 TRIPS_URL_TEMPLATE = "https://data.cityofnewyork.us/resource/{dataset_id}.csv"
 ZONES_URL = "https://data.cityofnewyork.us/resource/8meu-9t5y.json"
+
+
+def is_supported_dataset(dataset_id: str) -> bool:
+    """Return True if dataset_id is one of the configured NYC Taxi datasets."""
+    return dataset_id in SUPPORTED_DATASET_IDS
 
 DEFAULT_BATCH_LIMIT = 25000
 DEFAULT_ZONES_LIMIT = 300
