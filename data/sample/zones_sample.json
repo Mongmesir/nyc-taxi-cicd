@@ -1,0 +1,149 @@
+[
+  {
+    "locationid": "43",
+    "zone": "Central Park",
+    "borough": "Manhattan",
+    "shape_leng": "0.099739",
+    "shape_area": "0.000380",
+    "the_geom": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [-73.9730, 40.7680],
+            [-73.9580, 40.7680],
+            [-73.9580, 40.7970],
+            [-73.9730, 40.7970],
+            [-73.9730, 40.7680]
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "locationid": "48",
+    "zone": "Clinton East",
+    "borough": "Manhattan",
+    "shape_leng": "0.043747",
+    "shape_area": "0.000094",
+    "the_geom": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [-73.9960, 40.7570],
+            [-73.9870, 40.7570],
+            [-73.9870, 40.7650],
+            [-73.9960, 40.7650],
+            [-73.9960, 40.7570]
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "locationid": "132",
+    "zone": "JFK Airport",
+    "borough": "Queens",
+    "shape_leng": "0.245479",
+    "shape_area": "0.002038",
+    "the_geom": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [-73.8120, 40.6330],
+            [-73.7640, 40.6330],
+            [-73.7640, 40.6590],
+            [-73.8120, 40.6590],
+            [-73.8120, 40.6330]
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "locationid": "141",
+    "zone": "Lenox Hill West",
+    "borough": "Manhattan",
+    "shape_leng": "0.041514",
+    "shape_area": "0.000077",
+    "the_geom": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [-73.9630, 40.7620],
+            [-73.9540, 40.7620],
+            [-73.9540, 40.7700],
+            [-73.9630, 40.7700],
+            [-73.9630, 40.7620]
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "locationid": "161",
+    "zone": "Midtown Center",
+    "borough": "Manhattan",
+    "shape_leng": "0.035804",
+    "shape_area": "0.000072",
+    "the_geom": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [-73.9810, 40.7540],
+            [-73.9730, 40.7540],
+            [-73.9730, 40.7620],
+            [-73.9810, 40.7620],
+            [-73.9810, 40.7540]
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "locationid": "237",
+    "zone": "Upper East Side South",
+    "borough": "Manhattan",
+    "shape_leng": "0.042213",
+    "shape_area": "0.000096",
+    "the_geom": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [-73.9700, 40.7640],
+            [-73.9610, 40.7640],
+            [-73.9610, 40.7730],
+            [-73.9700, 40.7730],
+            [-73.9700, 40.7640]
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "locationid": "238",
+    "zone": "Upper West Side North",
+    "borough": "Manhattan",
+    "shape_leng": "0.052809",
+    "shape_area": "0.000185",
+    "the_geom": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [-73.9780, 40.7850],
+            [-73.9660, 40.7850],
+            [-73.9660, 40.7990],
+            [-73.9780, 40.7990],
+            [-73.9780, 40.7850]
+          ]
+        ]
+      ]
+    }
+  }
+]
